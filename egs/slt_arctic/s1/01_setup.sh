@@ -73,7 +73,7 @@ if [[ ! -f ${data_dir}.zip ]]; then
     fi
     do_unzip=true
 fi
-if [[ ! -d ${data_dir} ]] || [[ -n "$do_unzip" ]]; then
+if [[ ! -d ${data_dir} ]] || [[ -n "${do_unzip}" ]]; then
     echo "unzipping files......"
     rm -fr ${data_dir}
     rm -fr ${duration_dir}/data
