@@ -14,6 +14,10 @@ experiments/
 SPTK*
 build/
 bin/
+tools/festival
+tools/festvox
+tools/postfilter*
+tools/speech_tools
 
 # Pycharm IDE
 .idea/
