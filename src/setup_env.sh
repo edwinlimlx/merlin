@@ -7,10 +7,10 @@ export PYTHONBIN="python"
 # Maybe the following variables need to be setup
 #export PYTHONPATH=/some/lab/specific/path:PYTHONPATH
 #export PATH=/path:PATH
-#export LD_LIBRARY_PATH=/anotherpath:LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:LD_LIBRARY_PATH
 
 # Basic Theano flags
-MERLIN_THEANO_FLAGS="cuda.root=/usr/local/8.0,floatX=float32,on_unused_input=ignore"
+MERLIN_THEANO_FLAGS="cuda.root=/usr/local/cuda,floatX=float32,on_unused_input=ignore"
 export MERLIN_THEANO_FLAGS
 	
 
