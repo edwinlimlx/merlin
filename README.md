@@ -33,14 +33,32 @@ Merlin uses the following dependencies:
 
 To install Merlin, `cd` merlin and run the below steps:
 
+- Create and install conda packages
+```
+conda env create --file conda_merlin.txt
+```
+- Install matplotlib on conda
+```
+conda install matplotlib
+```
+- Install tensorflow GPU (for python 3.6)
+```
+pip install --ignore-installed --upgrade 
+https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.6.0-cp36-cp36m-linux_x86_64.whl
+```
 - Install some basic tools in Merlin
 ```sh
 bash tools/compile_tools.sh
 ```
 - Install python dependencies
 ```sh
-pip install numpy 
-pip install -r requirements.txt
+pip install numpy && pip install -r requirements.txt
+```
+- Theano (As I experience problems with theano this is the options that works for me.)
+```
+pip uninstall theano
+conda uninstall theano 
+conda install theano -c mila-udem
 ```
 
 For detailed instructions, to build the toolkit: see [INSTALL](https://github.com/CSTR-Edinburgh/merlin/blob/master/INSTALL.md) and [CSTR blog post](https://cstr-edinburgh.github.io/install-merlin/).  
